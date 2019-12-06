@@ -1,14 +1,20 @@
 const mongoose = require('mongoose')
-const date = new Date();
+const log = require('../helpers/log')
 
-mongoose.connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-})
-.then(() => {
-    console.log(`[${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]  connected to mongoDB`)
-})
-.catch(err => {
-    console.error(`[${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]  failed connecting to mongoDB`)
-})
+const mongoDB = {
+    connect : () =>{
+        mongoose.connect(process.env.MONGODB_URL, {
+            useNewUrlParser: true,
+            useCreateIndex: true,
+            useUnifiedTopology: true
+        })
+        .then(() => {
+            log('Connected to mongoDB')
+        })
+        .catch(err => {
+            log('Failed connecting to mongoDB')
+        })
+    }
+}
+
+module.exports = mongoDB
