@@ -3,7 +3,7 @@ const userRouter = require('./routers/user')
 const todoRouter = require('./routers/todo')
 const log = require('./helpers/log')
 const mongoDB = require('./db/db')
-const port = process.env.PORT
+const port = process.env.PORT || 6000
 const app = express()
 
 mongoDB.connect()
