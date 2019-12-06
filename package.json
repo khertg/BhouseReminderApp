@@ -1,0 +1,32 @@
+{
+  "name": "bhousereminderapp",
+  "version": "1.0.0",
+  "description": "Reminding of your contribution in your bhouse.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f ./.env nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khertg/BhouseReminderApp.git"
+  },
+  "keywords": [
+    "reminder",
+    "bhouse"
+  ],
+  "author": "Khert Geverola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khertg/BhouseReminderApp/issues"
+  },
+  "homepage": "https://github.com/khertg/BhouseReminderApp#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.13",
+    "validator": "^12.1.0"
+  }
+}
