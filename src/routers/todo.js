@@ -16,7 +16,7 @@ router.get('/api/todos', async (req, res) => {
                 } 
              })
             .then((data) => {
-                res.status(201).send({ todos: data })
+                res.status(201).json({ todos: data })
             })
             .catch((err) => {
                 res.status(400).json({ message: error })
