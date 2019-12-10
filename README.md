@@ -1,6 +1,6 @@
 ## Steps to run the project.
 
-### 1. Clone the develop branch of the project.
+### 1. Clone the project.
 ``` cmd
    git clone https://github.com/khertg/BhouseReminderApp.git
 ```
