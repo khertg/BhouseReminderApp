@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <b-button variant="success">Bootstrap Working</b-button>
+    <p>URL of api : {{ apiURL }}</p>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -37,6 +38,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      apiURL: process.env.VUE_APP_API_URL
+    }
   }
 }
 </script>
