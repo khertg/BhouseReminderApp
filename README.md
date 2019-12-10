@@ -1,6 +1,3 @@
-## BhouseReminderApp
-
-
 ## Steps to run the project.
 
 ### 1. Clone the develop branch of the project.
