@@ -50,7 +50,7 @@ router.put('/api/todos', async (req, res) => {
             })
 })
 
-router.delete('/crud/buses', async (req, res) => {
+router.delete('/api/buses', async (req, res) => {
     // Delete todo
     await Todo.deleteOne({ _id: req.body._id })
             .then((data)=>{
