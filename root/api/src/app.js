@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const testRouter = require('./routers/test')
 const userRouter = require('./routers/user')
 const todoRouter = require('./routers/todo')
@@ -9,6 +10,7 @@ const app = express()
 
 mongoDB.connect()
 
+app.use(cors())
 app.use(express.json())
 app.use(testRouter)
 app.use(userRouter)
